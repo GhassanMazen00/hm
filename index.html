@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Hend Mazen | Dermatology & Aesthetic Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #D4AF37;
+            --accent-color: #F8F8F8;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --white: #ffffff;
+            --light-bg: #f9f9f9;
+            --gold: #D4AF37;
+            --gold-light: #E8C96B;
+            --header-bg: rgba(10, 10, 10, 0.95);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+            background-color: #fefefe;
+        }
+
+        h1, h2, h3, h4, h5, .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 4.2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold);
+            bottom: -15px;
+            left: 0;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .section-center {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 35px;
+            background-color: var(--gold);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: var(--primary-color);
+            border-color: var(--gold);
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--primary-color);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--primary-color);
+            color: var(--gold);
+            border-color: var(--primary-color);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--header-bg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            padding: 1.2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .logo span {
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 2.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gold);
+        }
+
+        /* Hero Section - UPDATED */
+        .hero {
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .hero-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.7);
+            transform: scale(1.1);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+            border-radius: 0 20px 20px 0;
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
+            filter: brightness(0.9);
+        }
+
+        .hero-content {
+            color: var(--white);
+            padding-left: 2rem;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* About Section - COMPLETELY REDESIGNED */
+        .about {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+        }
+
+        .about:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-frame {
+            width: 400px;
+            height: 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .profile-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        .frame-decoration {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: var(--gold);
+            color: var(--primary-color);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+            z-index: 2;
+        }
+
+        .experience-badge span:first-child {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .experience-badge span:last-child {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            position: relative;
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 3.5rem;
+        }
+
+        .about-content h2:after {
+            left: 0;
+            transform: none;
+            width: 80px;
+            height: 3px;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border-left: 4px solid var(--gold);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .qualifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .qualification {
+            background: var(--white);
+            padding: 1.2rem 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+
+        .qualification:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-light);
+        }
+
+        .qualification i {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        /* Services Section - UPDATED FOR SYMMETRY */
+        .services {
+            background-color: rgba(248, 248, 248, 0.9);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0f0f0;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--gold-light);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--gold);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--gold);
+            color: var(--white);
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .service-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-content p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--gold-light);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .contact-method:hover .contact-icon {
+            background-color: var(--primary-color);
+            color: var(--gold);
+            transform: rotate(10deg);
+        }
+
+        .contact-method h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-method p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-method a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-method a:hover {
+            color: var(--gold);
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: #f9f9f9;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .footer-col h3:after {
+            background-color: var(--gold);
+            bottom: -10px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links i {
+            color: var(--gold);
+            width: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--gold);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Popup Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            transform: translateY(50px) scale(0.9);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-header h3 {
+            color: var(--white);
+            margin-bottom: 0;
+        }
+
+        .modal-body {
+            padding: 3rem;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-option {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .contact-option:hover {
+            background-color: var(--light-bg);
+            border-color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .option-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .whatsapp-icon {
+            background-color: #25D366;
+        }
+
+        .phone-icon {
+            background-color: var(--primary-color);
+        }
+
+        .email-icon {
+            background-color: var(--gold);
+        }
+
+        .instagram-icon {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+
+        .facebook-icon {
+            background-color: #1877F2;
+        }
+
+        .option-text h4 {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .option-text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--gold);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close-modal:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        /* Service Detail Modal */
+        .service-modal .modal {
+            max-width: 700px;
+        }
+
+        .service-detail {
+            padding: 2rem;
+        }
+
+        .service-detail h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-detail p {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-benefits {
+            margin-top: 2rem;
+        }
+
+        .service-benefits h4 {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .benefits-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .benefits-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefits-list li i {
+            color: var(--gold);
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        /* Appointment Button in Footer */
+        .footer-appointment {
+            margin-top: 2rem;
+        }
+
+        /* Header Book Appointment Button Fix */
+        .nav-item .btn {
+            padding: 10px 25px;
+            font-size: 0.9rem;
+            margin-top: -5px;
+        }
+
+        /* Center text for section titles */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .profile-frame {
+                width: 350px;
+                height: 450px;
+            }
+            
+            .experience-badge {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .experience-badge span:first-child {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-container, .about-container, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+            }
+            
+            .hero-image img {
+                height: 500px;
+                border-radius: 20px;
+            }
+            
+            .hero-content {
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .profile-frame {
+                width: 320px;
+                height: 420px;
+                margin: 0 auto;
+            }
+            
+            .about-content {
+                text-align: center;
+            }
+            
+            .about-content h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--header-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 3rem;
+                transition: var(--transition);
+                z-index: 999;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 0 0 2rem 0;
+            }
+            
+            .nav-item .btn {
+                margin-top: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .service-card {
+                padding: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .profile-frame {
+                width: 280px;
+                height: 370px;
+            }
+            
+            .experience-badge {
+                width: 110px;
+                height: 110px;
+                bottom: -20px;
+                right: -20px;
+            }
+            
+            .experience-badge span:first-child {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding-top: 80px;
+            }
+            
+            .hero-image img {
+                height: 400px;
+            }
+            
+            .modal-body {
+                padding: 2rem;
+            }
+            
+            .contact-option {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-detail {
+                padding: 1.5rem;
+            }
+            
+            header {
+                padding: 1rem 0;
+            }
+            
+            .about-text {
+                padding: 2rem;
+            }
+            
+            .qualifications {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="section-center header-container">
+            <a href="#" class="logo">Dr. <span>Hend Mazen</span></a>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="btn book-appointment-btn">Book Appointment</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://i.postimg.cc/K897DgXT/Whats-App-Image-2026-01-17-at-4-54-09-AM.jpg" alt="Background" class="hero-bg-img">
+        </div>
+        <div class="section-center hero-container">
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/K897DgXT/Whats-App-Image-2026-01-17-at-4-54-09-AM.jpg" alt="Dr. Hend Mazen">
+            </div>
+            <div class="hero-content">
+                <h1>Dr. Hend Mazen</h1>
+                <p>Renowned Dermatologist & Aesthetic Medicine Specialist with over 10 years of expertise in advanced skin treatments, laser therapies, and aesthetic enhancements. Dedicated to providing personalized care with exceptional, natural-looking results.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Explore Services</a>
+                    <a href="#" class="btn btn-outline book-appointment-btn">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - COMPLETELY REDESIGNED -->
+    <section class="about" id="about">
+        <div class="section-center about-container">
+            <div class="about-image">
+                <div class="profile-frame">
+                    <img src="https://i.postimg.cc/0jqH1Jyk/Whats-App-Image-2026-01-17-at-4-54-09-AM-(1).jpg" alt="Dr. Hend">
+                    <div class="frame-decoration"></div>
+                    <div class="experience-badge">
+                        <span>10+</span>
+                        <span>Years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>About Dr. Hend</h2>
+                <div class="about-text">
+                    <p>Dr. Hend is a licensed physician in Egypt with over 10 years of experience in dermatology, aesthetic medicine, and laser treatments. She is dedicated to delivering natural, balanced results through personalized treatment plans focused on skin health, facial harmony, and confidence.</p>
+                    <p>Dr. Hend combines medical expertise with modern techniques to help patients achieve clearer, healthier-looking skin and refined aesthetic outcomes safely and professionally.</p>
+                </div>
+                
+                <div class="qualifications">
+                    <div class="qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Licensed Physician</h4>
+                            <p>Egypt Medical Council</p>
+                        </div>
+                    </div>
+                    <div class="qualification">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h4>Specialized Training</h4>
+                            <p>Dermatology & Aesthetics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - SYMMETRICAL 4x2 GRID -->
+    <section class="services" id="services">
+        <div class="section-center">
+            <div class="text-center">
+                <h2>Specialized Treatments</h2>
+                <p style="max-width: 800px; margin: 0 auto 3rem;">Comprehensive aesthetic and dermatological services tailored to your individual needs and goals.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Row 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Botox (Anti-wrinkle / Face shaping)</h3>
+                        <p>Minimize fine lines and wrinkles while subtly enhancing facial contours for a refreshed, natural appearance.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="botox">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plus-square"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fillers (Face contour & enhancement)</h3>
+                        <p>Restore volume, define facial features, and enhance natural beauty with precision dermal filler treatments.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="fillers">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Skin Boosters / Glow Injections</h3>
+                        <p>Hydrate and rejuvenate skin from within for a radiant, healthy glow with customized skin booster treatments.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="skinboosters">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>PRP / Plasma (Glow + Hair)</h3>
+                        <p>Harness your body's natural healing factors for skin rejuvenation and hair restoration.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="prp">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Laser Hair Removal</h3>
+                        <p>Safe, effective permanent reduction of unwanted hair with advanced laser technology.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="laserhair">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Lasers for Skin Tone & Pigmentation</h3>
+                        <p>Targeted laser treatments to even skin tone and reduce hyperpigmentation for flawless complexion.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="laserskin">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Acne Scars + Texture Improvement</h3>
+                        <p>Advanced treatments to smooth skin texture and reduce the appearance of acne scarring.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="acnescars">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Other Aesthetic Laser Services</h3>
+                        <p>Comprehensive laser treatments for various skin concerns including vascular lesions and skin tightening.</p>
+                        <a href="#" class="btn btn-outline learn-more-btn" data-service="otherlaser">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-center">
+            <div class="text-center">
+                <h2>Contact & Consultation</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Begin your journey to healthier, more radiant skin with a personalized consultation. Dr. Hend will assess your concerns and recommend a tailored treatment plan.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Medical Avenue, Suite 405<br>Downtown, Cairo, Egypt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Sun-Thu: 9:00 AM - 6:00 PM<br>Friday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+201234567890">+20 123 456 7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/201234567890" target="_blank">+20 123 456 7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@drhendmazen.com">info@drhendmazen.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <a href="https://instagram.com/drhendmazen" target="_blank">@drhendmazen</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4>Facebook</h4>
+                                <a href="https://facebook.com/drhendmazen" target="_blank">Dr. Hend Mazen</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-appointment">
+                        <a href="#" class="btn book-appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your concerns or specific requests" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-center">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Dr. Hend Mazen</h3>
+                    <p>Specialist in Dermatology & Aesthetic Medicine. Committed to excellence in skin health and aesthetic enhancement through evidence-based practices.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/drhendmazen" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/drhendmazen" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Dr. Hend</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">123 Medical Ave, Cairo</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+201234567890">+20 123 456 7890</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/201234567890" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@drhendmazen.com">info@drhendmazen.com</a></li>
+                        <li class="footer-appointment">
+                            <a href="#" class="btn btn-gold book-appointment-btn">Book Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Dr. Hend Mazen. All rights reserved. | Professional Dermatology & Aesthetic Medicine</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Modal -->
+    <div class="modal-overlay appointment-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Book Your Appointment</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Choose your preferred method to schedule a consultation with Dr. Hend Mazen:</p>
+                <div class="contact-options">
+                    <a href="tel:+201234567890" class="contact-option">
+                        <div class="option-icon phone-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="option-text">
+                            <h4>Call Now</h4>
+                            <p>+20 123 456 7890</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://wa.me/201234567890" target="_blank" class="contact-option">
+                        <div class="option-icon whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="option-text">
+                            <h4>WhatsApp</h4>
+                            <p>Message directly for appointment</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:info@drhendmazen.com" class="contact-option">
+                        <div class="option-icon email-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="option-text">
+                            <h4>Email</h4>
+                            <p>info@drhendmazen.com</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://instagram.com/drhendmazen" target="_blank" class="contact-option">
+                        <div class="option-icon instagram-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="option-text">
+                            <h4>Instagram</h4>
+                            <p>DM @drhendmazen</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://facebook.com/drhendmazen" target="_blank" class="contact-option">
+                        <div class="option-icon facebook-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="option-text">
+                            <h4>Facebook</h4>
+                            <p>Message Dr. Hend Mazen</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Detail Modals -->
+    <div class="modal-overlay service-modal" id="botox-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Botox (Anti-wrinkle / Face shaping)</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="service-detail">
+                <p>Botox treatments are used to temporarily relax facial muscles that cause dynamic wrinkles, such as forehead lines, frown lines, and crow's feet. The treatment can also be used for facial shaping, including jawline contouring and brow lifting.</p>
+                
+                <div class="service-benefits">
+                    <h4>Treatment Benefits:</h4>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Reduces appearance of fine lines and wrinkles</li>
+                        <li><i class="fas fa-check"></i> Prevents formation of new wrinkles</li>
+                        <li><i class="fas fa-check"></i> Non-surgical brow lift and eye opening</li>
+                        <li><i class="fas fa-check"></i> Jawline contouring for slimmer appearance</li>
+                        <li><i class="fas fa-check"></i> Treatment for excessive sweating (hyperhidrosis)</li>
+                        <li><i class="fas fa-check"></i> Quick procedure with minimal downtime</li>
+                    </ul>
+                </div>
+                
+                <p><strong>Treatment Duration:</strong> 15-30 minutes | <strong>Downtime:</strong> None | <strong>Results Appear:</strong> 3-7 days | <strong>Duration:</strong> 3-6 months</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay service-modal" id="fillers-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Fillers (Face contour & enhancement)</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="service-detail">
+                <p>Dermal fillers are gel-like substances injected beneath the skin to restore lost volume, smooth lines, enhance facial contours, and rejuvenate the overall appearance. Different types of fillers are used for various areas and concerns.</p>
+                
+                <div class="service-benefits">
+                    <h4>Common Treatment Areas:</h4>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Cheek augmentation and volume restoration</li>
+                        <li><i class="fas fa-check"></i> Nasolabial fold (smile line) correction</li>
+                        <li><i class="fas fa-check"></i> Lip enhancement and definition</li>
+                        <li><i class="fas fa-check"></i> Jawline and chin contouring</li>
+                        <li><i class="fas fa-check"></i> Under-eye tear trough rejuvenation</li>
+                        <li><i class="fas fa-check"></i> Marionette lines and oral commissures</li>
+                    </ul>
+                </div>
+                
+                <p><strong>Treatment Duration:</strong> 30-60 minutes | <strong>Downtime:</strong> Mild swelling/bruising (1-3 days) | <strong>Results:</strong> Immediate | <strong>Duration:</strong> 6-24 months depending on product</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other service modals would continue here... -->
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Appointment Modal Functionality
+        const appointmentModal = document.querySelector('.appointment-modal');
+        const bookAppointmentBtns = document.querySelectorAll('.book-appointment-btn');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        
+        bookAppointmentBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                appointmentModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-overlay')) {
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Service Detail Modals
+        const learnMoreBtns = document.querySelectorAll('.learn-more-btn');
+        
+        learnMoreBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const serviceId = btn.getAttribute('data-service');
+                const serviceModal = document.getElementById(`${serviceId}-modal`);
+                if (serviceModal) {
+                    serviceModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            
+            // In a real application, you would send this data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We will contact you shortly.`);
+            
+            // Reset the form
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.padding = '1.2rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Prevent modal close when clicking inside modal
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
